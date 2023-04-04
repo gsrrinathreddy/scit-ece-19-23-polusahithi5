@@ -42,7 +42,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   borderTop: '1px solid rgba(0, 0, 0, .125)',
 }));
 
-export default function Experience() {
+export default function Projects() {
   const [expanded, setExpanded] = React.useState('panel1');
 
   const handleChange = (panel) => (event, newExpanded) => {
@@ -53,31 +53,31 @@ export default function Experience() {
     <div>
       <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-          <Typography>Collapsible Group Item #1</Typography>
+          <Typography>Project1</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-           Iam a fresher and iam eager to learn new skills
+           Palm vein technology
           </Typography>
         </AccordionDetails>
       </Accordion>
       <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
         <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
-          <Typography>Collapsible Group Item #2</Typography>
+          <Typography>Project2</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-           -
+           -Automatic certificate generation
           </Typography>
         </AccordionDetails>
       </Accordion>
       <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
         <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
-          <Typography>Collapsible Group Item #3</Typography>
+          <Typography>Project3</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            -
+            -IOT Weather reporting system
           </Typography>
         </AccordionDetails>
       </Accordion>

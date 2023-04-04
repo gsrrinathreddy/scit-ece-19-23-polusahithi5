@@ -25,7 +25,7 @@ export default function Card5() {
         </CardContent>
       </CardActionArea>
     </Card>
-    
-  );
+    
+  );
 
 }

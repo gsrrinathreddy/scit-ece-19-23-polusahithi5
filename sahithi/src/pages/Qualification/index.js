@@ -13,7 +13,7 @@ export default function Qualifications() {
       <h1 className='mode'>Qualifications</h1>
       <ListItem alignItems="flex-start">
         <ListItemAvatar>
-          <Avatar alt="sree chaitanya engineering college" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSPcHLQr7yXRS3xTzz-fDmcbo_3WbimLnvW5-w8r5IJQ&s" />
+          <Avatar alt="sree chaitanya engineering college" src="https://images.app.goo.gl/7QpJD1bkeEARa35s7"/>
         </ListItemAvatar>
         <ListItemText
           primary="sree chaitanya engineering college"
@@ -27,7 +27,7 @@ export default function Qualifications() {
               >
                 86% CGPA
               </Typography>
-              {" — B Com Computer Applications, Information Technology"}
+              {"Electronics and communication engineering"}
             </React.Fragment>
           }
         />
@@ -35,7 +35,7 @@ export default function Qualifications() {
       <Divider variant="inset" component="li" />
       <ListItem alignItems="flex-start">
         <ListItemAvatar>
-          <Avatar alt="Trinity Junior College" src="https://www.w3schools.com/howto/img_avatar.png" />
+          <Avatar alt="Trinity Junior College" src="https://images.app.goo.gl/7QpJD1bkeEARa35s7"/>
         </ListItemAvatar>
         <ListItemText
           primary="Trinity Junior College"
@@ -49,7 +49,7 @@ export default function Qualifications() {
               >
                 84% CGPA
               </Typography>
-              {" — Intermediate studies with Computers & Commerce"}
+              {" — Intermediate studies with Mathematics & physics,chemistry "}
             </React.Fragment>
           }
         />
@@ -57,7 +57,7 @@ export default function Qualifications() {
       <Divider variant="inset" component="li" />
       <ListItem alignItems="flex-start">
         <ListItemAvatar>
-          <Avatar alt="carmel giri convent high school" src="https://55knots.com.au/wp-content/uploads/2021/01/Zanj-Avatar-scaled.jpg" />
+          <Avatar alt="carmel giri convent high school" src ="https://images.app.goo.gl/nUJBfsSSr3xDadYy8"/>
         </ListItemAvatar>
         <ListItemText
           primary="carmel giri convent high school"
