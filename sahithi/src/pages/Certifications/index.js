@@ -1,53 +1,34 @@
+
 import * as React from 'react';
-import { styled } from '@mui/material/styles';
-import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
-import MuiAccordion from '@mui/material/Accordion';
-import MuiAccordionSummary from '@mui/material/AccordionSummary';
-import MuiAccordionDetails from '@mui/material/AccordionDetails';
-import Typography from '@mui/material/Typography';
+import { Accordion } from '@mui/material';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
 
-const Accordion = styled((props) => (
-  <MuiAccordion disableGutters elevation={0} square {...props} />
-))(({ theme }) => ({
-  border: `1px solid ${theme.palette.divider}`,
-  '&:not(:last-child)': {
-    borderBottom: 0,
-  },
-  '&:before': {
-    display: 'none',
-  },
-}));
+import axios from 'axios';
+import { Typography } from '@mui/material';
+import {useState,useEffect} from 'react';
 
-const AccordionSummary = styled((props) => (
-  <MuiAccordionSummary
-    expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: '0.9rem' }} />}
-    {...props}
-  />
-))(({ theme }) => ({
-  backgroundColor:
-    theme.palette.mode === 'dark'
-      ? 'rgba(255, 255, 255, .05)'
-      : 'rgba(0, 0, 0, .03)',
-  flexDirection: 'row-reverse',
-  '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
-    transform: 'rotate(90deg)',
-  },
-  '& .MuiAccordionSummary-content': {
-    marginLeft: theme.spacing(1),
-  },
-}));
+export default function Certifications(){
 
-const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
-  padding: theme.spacing(2),
-  borderTop: '1px solid rgba(0, 0, 0, .125)',
-}));
+    const [loader,setLoader] = useState(true);
+    const [certifications,setCertifications] = useState(null);
 
-export default function Experience() {
-  const [expanded, setExpanded] = React.useState('panel1');
+    const connectToServer = async  () => axios.get('http://localhost:8000/Certifications')
+                                            .then(res=>{
+                                        
+                                                console.log(res.data);
+                                                setCertifications(res.data);
+                                                setLoader(false)
+                                            }).catch(err=>console.log(err))
+useEffect(()=>{
+   connectToServer();
+},[])
+                    const [expanded, setExpanded] = React.useState('panel1');
 
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
+
 
   return (
     <div>
@@ -86,4 +67,4 @@ export default function Experience() {
       </Accordion>
     </div>
   );
-}
+  }
